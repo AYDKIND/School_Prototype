@@ -1,0 +1,217 @@
+:root{
+  --navy:#08314a;
+  --gold:#c86b10;
+  --muted:#6b7785;
+  --bg:#fbfbfb;
+  --card:#ffffff;
+  --radius:12px;
+  --maxwidth:1100px;
+  --shadow: 0 6px 18px rgba(7,20,30,0.06);
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--navy);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.45;
+  font-size:16px;
+}
+
+.container{
+  width:90%;
+  max-width:var(--maxwidth);
+  margin:0 auto;
+  padding:48px 0;
+}
+
+/* Header */
+.site-header{
+  background:white;
+  border-bottom:1px solid #e9eef3;
+  position:sticky;
+  top:0;
+  z-index:60;
+}
+.header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+}
+.brand{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  text-decoration:none;
+  color:var(--navy);
+}
+.logo{
+  width:72px;
+  height:72px;
+  object-fit:contain;
+  border-radius:8px;
+  background:transparent;
+}
+.brand-text .school-name{
+  font-weight:700;
+  font-family: 'Merriweather', serif;
+  font-size:1.05rem;
+}
+.brand-text .school-sub{
+  font-size:0.78rem;
+  color:var(--muted);
+}
+
+
+.nav-toggle{
+  display:none;
+  background:transparent;
+  border:1px solid #e2e8ee;
+  padding:10px 12px;
+  border-radius:8px;
+  font-size:18px;
+}
+.main-nav ul{
+  list-style:none;
+  display:flex;
+  gap:16px;
+  margin:0;
+  padding:0;
+}
+.main-nav a{
+  text-decoration:none;
+  color:var(--navy);
+  padding:10px 12px;
+  border-radius:8px;
+  font-weight:600;
+}
+.main-nav a:hover{background:#f3f7fb}
+
+
+.hero{
+  background: linear-gradient(180deg, rgba(8,49,74,0.04), rgba(8,49,74,0.02));
+  padding:64px 0;
+  text-align:left;
+}
+.hero-inner h1{
+  margin:0 0 12px;
+  font-family: 'Merriweather', serif;
+  font-size:2.1rem;
+  color:var(--navy);
+}
+.lead{color:var(--muted); margin-bottom:18px}
+.btn{
+  display:inline-block;
+  text-decoration:none;
+
+  padding:10px 16px;
+  border-radius:10px;
+  font-weight:600;
+  cursor:pointer;
+  border:1px solid transparent;
+  background:transparent;
+}
+.btn.primary{
+  background:var(--navy);
+  color:white;
+  border-color:var(--navy);
+}
+.btn.outline{
+  background:white;
+  color:var(--navy);
+  border-color:var(--navy);
+}
+
+/* general sections */
+.section{padding:40px 0;background:transparent}
+.card{
+  background:var(--card);
+  border-radius:var(--radius);
+  padding:22px;
+  box-shadow:var(--shadow);
+}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.small-cards .teacher-card{background:#fff;padding:18px;border-radius:12px;text-align:center;box-shadow:var(--shadow)}
+.teacher-card .avatar{width:56px;height:56px;background:var(--gold);border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-weight:700;color:white;margin-bottom:12px}
+
+/* admissions modal */
+.modal{
+  position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(2,6,12,0.4);padding:20px;
+}
+.modal[aria-hidden="false"]{display:flex}
+.modal-content{
+  background:white;padding:24px;border-radius:12px;width:100%;max-width:540px;box-shadow:var(--shadow);position:relative;
+}
+.modal-close{position:absolute;right:12px;top:8px;border:0;background:transparent;font-size:22px}
+
+/* gallery placeholders */
+/* --- Balanced responsive gallery (use this) --- */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+  align-items: start; /* prevent items from stretching vertically */
+}
+
+/* Each gallery item has a fixed aspect ratio so all cells remain uniform */
+.photo {
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+
+  aspect-ratio: 4 / 3;      
+  width: 100%;
+  min-height: 160px;   
+  display: block;
+}
+
+/* Image fills the photo box without distortion */
+.photo img {
+  display: block;           /* removes inline gap */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;        /* crops to fill without distortion */
+  object-position: center;
+  transition: transform 0.3s ease;
+}
+
+.photo img:hover {
+  transform: scale(1.05);
+}
+
+
+
+/* forms  */
+.form label{display:block;margin-bottom:10px;font-size:0.95rem;color:var(--muted)}
+.form input[type="text"], .form input[type="email"], .form textarea{
+  width:100%;padding:10px;border-radius:8px;border:1px solid #e6edf3;background:#f2e8e8;margin-top:6px;font-size:1rem;
+}
+.form-actions{display:flex;gap:10px;justify-content:flex-end;margin-top:12px}
+
+/* footer */
+.site-footer{border-top:1px solid #cacfd5;padding:20px 0;background:rgb(204, 195, 195)}
+.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.muted{color:var(--muted)}
+
+
+@media (max-width:900px){
+  .grid{grid-template-columns:1fr}
+  .grid-3{grid-template-columns:repeat(1,1fr)}
+  .nav-toggle{display:inline-block}
+  .main-nav{position:absolute;top:80px;right:18px;background:white;border-radius:12px;padding:12px;box-shadow:var(--shadow);display:none}
+  .main-nav[data-visible="true"]{display:block}
+}
+
+@media (max-width:520px){
+  .brand-text .school-name{font-size:0.98rem}
+  .logo{width:56px;height:56px}
+  .container{width:94%}
+  .hero-inner h1{font-size:1.6rem}
+}

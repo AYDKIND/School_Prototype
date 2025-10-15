@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Baba Vasudev Public School — Naina Jhala</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="script.js">
+ 
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#home">
+        <img src="logo.png" alt="Baba Vasudev Public School logo" class="logo">
+        <div class="brand-text">
+          <div class="school-name">Baba Vasudev Public School</div>
+          <div class="school-sub">Naina Jhala, Dist. Sant Kabir Nagar, Uttar Pradesh</div>
+        </div>
+      </a>
+
+      <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">
+        ☰
+      </button>
+
+      <nav id="mainNav" class="main-nav" data-visible="false">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#academics">Academics</a></li>
+          <li><a href="#faculty">Faculty</a></li>
+          <li><a href="#admissions">Admissions</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    
+    <section id="home" class="hero">
+      <div class="container hero-inner">
+        <h1>Shaping bright futures with values & excellence</h1>
+        <p class="lead">A holistic learning environment in Naina Jhala nurturing character, curiosity and competence.</p>
+        <div class="hero-cta">
+          <a class="btn primary" href="#admissions">Apply Now</a>
+          <a class="btn outline" href="#about">Learn More</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section about">
+      <div class="container">
+        <div class="grid">
+          <div class="card">
+            <h2>About Us</h2>
+            <p>Baba Vasudev Public School provides a balanced curriculum that emphasizes academic excellence, moral values and extracurricular growth. Located in Naina Jhala, we serve the Sant Kabir Nagar community with modern facilities and an experienced faculty.</p>
+          </div>
+
+          <div class="card">
+            <h3>Mission</h3>
+            <p>To empower every student to achieve their full potential through quality education, discipline and service to society.</p>
+
+            <h3>Vision</h3>
+            <p>To be a centre of excellence, producing compassionate leaders and lifelong learners.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACADEMICS -->
+    <section id="academics" class="section academics">
+      <div class="container">
+        <h2>Academics</h2>
+        <p class="muted">Structured curriculum, modern labs and continuous assessment.</p>
+        <div class="grid-3">
+          <article class="feature">
+            <h4>Primary Years</h4>
+            <p>Play-based learning and foundational literacy & numeracy.</p>
+          </article>
+          <article class="feature">
+            <h4>Middle School</h4>
+            <p>Interactive classes, labs and project-based learning.</p>
+          </article>
+          <article class="feature">
+            <h4>Senior Secondary</h4>
+            <p>Stream options, exam preparation and career guidance.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FACULTY -->
+    <section id="faculty" class="section faculty">
+      <div class="container">
+        <h2>Faculty</h2>
+        <p class="muted">Experienced, caring and student-focused teachers.</p>
+        <div class="grid-3 small-cards">
+          <div class="teacher-card">
+            <div class="avatar">A</div>
+            <h4>Mr. Sunil Yadav</h4>
+            <p>Principal</p>
+          </div>
+          <div class="teacher-card">
+            <div class="avatar">R</div>
+            <h4>Mr. R. Kumar</h4>
+            <p>Science Coordinator</p>
+          </div>
+          <div class="teacher-card">
+            <div class="avatar">S</div>
+            <h4>Ms. S. Sharma</h4>
+            <p>Mathematics</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ADMISSIONS -->
+    <section id="admissions" class="section admissions">
+      <div class="container">
+        <h2>Admissions</h2>
+        <p class="muted">Open for the new academic year. Limited seats per grade.</p>
+        <div class="admissions-grid">
+          <div>
+            <ul>
+              <li>Simple online application</li>
+              <li>Merit & interaction based selection</li>
+              <li>Scholarship options for eligible students</li>
+            </ul>
+          </div>
+          <div>
+            <button class="btn primary" id="openAdmissionForm">Start Application</button>
+          </div>
+        </div>
+      </div>
+      <!-- Modal (hidden) -->
+      <div id="admissionModal" class="modal" aria-hidden="true">
+        <div class="modal-content">
+          <button class="modal-close" id="closeAdmissionModal" aria-label="Close">&times;</button>
+          <h3>Admission Enquiry</h3>
+          <form id="admissionForm" class="form">
+            <label>
+              Full name
+              <input type="text" name="name" required />
+            </label>
+            <label>
+              Student's class applying for
+              <input type="text" name="class" required />
+            </label>
+            <label>
+              Contact phone
+              <input type="text" name="contact" required />
+            </label>
+            <label>
+              Contact email
+              <input type="text" name="contact" optional />
+            </label>
+            <div class="form-actions">
+              <button type="submit" class="btn primary">Submit</button>
+              <button type="button" class="btn outline" id="cancelAdmission">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- GALLERY -->
+<section id="gallery" class="section gallery">
+  <div class="container">
+    <h2>Gallery</h2>
+    <p class="muted">A glimpse of life at Baba Vasudev Public School.</p>
+    <div class="grid-3 gallery-grid">
+      <div class="photo">
+        <img src="img.png" alt="School classrooms">
+      </div>
+      <div class="photo">
+        <img src="school.png" alt="School Image">
+      </div>
+      <div class="photo">
+        <img src="lib.png" alt="School library">
+      </div>
+      <div class="photo">
+        <img src="sport.png" alt="Annual sports day event">
+      </div>
+    </div>
+  </div>
+    <!-- CONTACT -->
+    <section id="contact" class="section contact">
+      <div class="container">
+        <h2>Contact</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>Visit Us</h3>
+            <p>Baba Vasudev Public School<br>Naina Jhala, District Sant Kabir Nagar, Uttar Pradesh</p>
+            <p>Phone: +91 8923456787</p>
+            <p>Email: info@babavasudev.edu.in</p>
+          </div>
+
+          <div class="card">
+            <h3>Send a message</h3>
+            <form id="contactForm" class="form">
+              <label>
+                Your name
+                <input type="text" name="name" required />
+              </label>
+              <label>
+                Email
+                <input type="email" name="email" required />
+              </label>
+              <label>
+                Message
+                <textarea name="message" rows="5" required></textarea>
+              </label>
+              <div class="form-actions">
+                <button type="submit" class="btn primary">Send</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>@ <span id="year"></span> BABA VASUDEV PUBLIC SCHOOL — Naina Jhala. SANT KABIR NAGAR</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
